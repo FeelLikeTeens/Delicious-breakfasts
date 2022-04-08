@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display:wght@400;500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+*{
+    scroll-behavior: smooth !important;
+}
+
+body {
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+    color: rgb(17, 17, 17);
+    font-family: 'Roboto';
+    padding: 0;
+    margin: 0;
+}
+
+
+a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color:#e69f48;
+}
+
+.header {
+    display: flex;
+    position: fixed;
+    background-color: rgb(247, 247, 247);
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.1);
+    color:rgb(19, 19, 19);
+    z-index: 100;
+}
+
+.logo {
+    margin: 10px;
+}
+
+.logo > a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 18px);
+    color:rgb(19, 19, 19);
+    cursor:default;
+}
+
+.header-links {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-self: center;
+    flex-wrap: wrap;
+}
+
+.h-link {
+    font-family: sans-serif;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 10px);
+    margin: 10px;
+    padding: 5px;
+    color: rgb(19, 19, 19);
+}
+
+.h-link::after {
+    content: '';
+    display: block;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #f5b971;
+    transform: scaleX(0);
+    transition: ease .6s;
+}
+
+.h-link:hover:after,
+.h-link:focus:after {
+    transform: scaleX(1);
+}
+
+.h-link:hover {
+    opacity: .8;
+}
+
+.main-parallax{
+    background-image: 
+        linear-gradient(rgb(0, 0, 0, .6),rgb(0, 0, 0, .6)),
+        url('img/main-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.parallax {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    height: 100vh;
+}
+
+.parallax > h1 {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+    color:rgb(247, 247, 247);
+    font-family: sans-serif;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 50px);
+}
+.parallax > h2 {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+    color: rgb(230, 230, 230);
+    font-family: sans-serif;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+}
+
+.content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    color: rgb(19, 19, 19);
+    align-items: center;
+    margin: 60px 10% 0 10%;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.breakfest, .recipe {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 100px;
+    width: 100%;
+    padding-top: 70px;
+	margin-top: -70px;
+	-webkit-background-clip: content-box;
+	background-clip: content-box;
+}
+
+.title {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+ }
+
+.ttl {
+    font-family:'Roboto', sans-serif;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 12px);    
+}
+.ttl::after {
+    content: '';
+    display: block;
+    position: relative;
+    bottom: 0;
+    left:25%;
+    height: 3px;
+    width: 50%;
+    margin-top: 10px;
+    background-color: #f5b971;
+}
+
+.breakfest-content {
+    display: inline-flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.image {
+    float: left;
+    flex-grow: 1;
+    flex-basis: calc(50% - 20px);
+    margin: 10px 30px 10px 10px;
+    min-width: 300px;
+    max-width: 400px;
+    /* display: block;
+    position: relative;
+    margin: 0 30px 10px 10px;
+    padding: 0;
+    width: 400px;
+    height: 267px;
+    background-image: url('img/1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0;
+    border-radius: 10px; */
+}
+.image img {
+    position: relative;
+    max-width: 100%;
+    border: 0;
+    border-radius: 8px;
+}
+
+.text {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    flex-grow: 1;
+    flex-basis: calc(50% - 22px);
+    margin: 0;
+    min-width: 300px;
+    max-width: 100%;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.recipe-content {
+    display: flex;
+    position: relative;
+    flex-direction:row;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: stretch;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.recipe-item {
+    display: block;
+    position: relative;
+    flex-direction: row;
+    width: 250px;
+    max-width: 250px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px #ccc;
+    transform: scale(1);
+    transition: ease .3s;
+}
+
+.recipe-item:hover {
+    transform: scale(1.01);
+}
+
+.recipe-item a {
+    margin: 0 0 10px 0;
+}
+
+.img {
+    margin: 0 0 10px 0;
+    padding: 0;
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.img img {
+    float: left;
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.item-content {
+    display: block;
+
+}
+
+.recipe-text {
+    display: inline;
+    padding: 0;
+}
+
+.recipe-text p{
+    color:rgb(0, 0, 0, .8);
+    white-space: nowrap; 
+    overflow: hidden; 
+    padding: 0 5px;
+    text-overflow: ellipsis; 
+}
